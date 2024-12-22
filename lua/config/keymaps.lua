@@ -5,7 +5,7 @@
 -- use `vim.keymap.set` instead
 local map = vim.keymap.set
 
-map("n", "<leader>w", "<C-s>|<leader>cf", { desc = "Save file", remap = true })
+map("n", "<leader>w", "<leader>cf|<C-s>", { desc = "Save file", remap = true })
 map("n", "<leader>1", "<C-w>w", { desc = "Switch pane" })
 
 local cmp = require("cmp")
