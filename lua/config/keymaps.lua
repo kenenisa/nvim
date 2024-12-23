@@ -7,6 +7,7 @@ local map = vim.keymap.set
 
 map("n", "<leader>w", "<leader>cf|<C-s>", { desc = "Save file", remap = true })
 map("n", "<leader>1", "<C-w>w", { desc = "Switch pane" })
+map("n", "<leader>a", "ggVG", { desc = "Select all" })
 
 local cmp = require("cmp")
 
