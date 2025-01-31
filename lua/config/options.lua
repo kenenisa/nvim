@@ -6,11 +6,10 @@ vim.diagnostic.config({
   virtual_text = true, -- Display diagnostics as inline text
 })
 
--- vim.g.copilot_no_tab_map = true -- Disable Copilot default tab mapping
+vim.g.copilot_no_tab_map = true -- Disable Copilot default tab mapping
 vim.api.nvim_set_keymap("i", "<C-e>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 
 vim.api.nvim_set_keymap("n", "<leader>t", ":lua ToggleFloatingTerminal()<CR>", { noremap = true, silent = true })
-
 local floating_terminal = nil
 function ToggleFloatingTerminal()
   if floating_terminal and vim.api.nvim_win_is_valid(floating_terminal.win) then
